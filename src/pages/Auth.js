@@ -28,7 +28,7 @@ const Login =()=>{
     const handleSubmit = async(event)=>{
         event.preventDefault();
         try{
-            const res = await axios.post("http://localhost:5000/auth/login",{
+            const res = await axios.post("https://book-app-backend-7hg6.onrender.com/auth/login",{
                 username,
                 password
             });
@@ -70,7 +70,7 @@ const Register =()=>{
     const handleSubmit = async(event)=>{
         event.preventDefault();
         try{
-            const res = await axios.post("http://localhost:5000/auth/register",{
+            const res = await axios.post("https://book-app-backend-7hg6.onrender.com/auth/register",{
                 username,
                 password
             });

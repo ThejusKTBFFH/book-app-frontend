@@ -19,7 +19,7 @@ export const Home = () =>{
 
         const fetchBooks = async() =>{
             try{
-                const res = await axios.get(`http://localhost:5000/books/`);
+                const res = await axios.get(`https://book-app-backend-7hg6.onrender.com/books/`);
                 setBooks(res.data);
                 setLoading(false);
             }catch(err){

@@ -25,7 +25,7 @@ export const Editbook =(props)=>{
     const handleEdit = async(event)=>{
         event.preventDefault();
         try{
-            const res = await axios.put(`http://localhost:5000/books/${props.book._id}`,{...book}, {headers:{authorization: cookies.access_token},
+            const res = await axios.put(`https://book-app-backend-7hg6.onrender.com/books/${props.book._id}`,{...book}, {headers:{authorization: cookies.access_token},
             });
             alert("Book Edited");
             navigate("/");
@@ -40,7 +40,7 @@ export const Editbook =(props)=>{
         event.preventDefault();
 
         try{
-            const res = await axios.delete(`http://localhost:5000/books/${props.book._id}`, {headers:{authorization: cookies.access_token},
+            const res = await axios.delete(`https://book-app-backend-7hg6.onrender.com/books/${props.book._id}`, {headers:{authorization: cookies.access_token},
             });
             alert("Book Deleted");
             navigate("/");

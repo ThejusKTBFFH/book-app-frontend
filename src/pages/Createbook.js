@@ -26,7 +26,7 @@ export const Createbook = () =>{
     const handleSubmit = async(event)=>{
         event.preventDefault();
         try{
-            const res = await axios.post("http://localhost:5000/books/",{...book}, {headers:{authorization: cookies.access_token},
+            const res = await axios.post("https://book-app-backend-7hg6.onrender.com/books/",{...book}, {headers:{authorization: cookies.access_token},
             });
             alert("Book created");
             navigate("/");
